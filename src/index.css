@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
+.App {
+  @apply h-[100Vh] w-[100%] bg-[#e6e6e6] flex justify-center items-center;
+}
+.App {
+  font-family: sans-serif;
+}
+.completed {
+  color: gray;
+  text-decoration: line-through;
+}
+span {
+  cursor: pointer;
+  user-select: none;
+}
 @tailwind utilities;
