@@ -3,19 +3,13 @@ const listArr = [
   { todo: "Sleep", isCompleted: true },
 ];
 
-export const todoReducer = (
-  state = [
-    { todo: "Eat", isCompleted: false },
-    { todo: "Sleep", isCompleted: true },
-  ],
-  action
-) => {
+export const todoReducer = (state = listArr, action) => {
   switch (action.type) {
     case "ADDTODO":
       return state.concat({ todo: list, isCompleted: false });
     case "TOGGLE":
       return (state[id] = {
-        todo: newTodos[id].todo,
+        ...state,
         isCompleted: !newTodos[id].isCompleted,
       });
     case "DELETE":
