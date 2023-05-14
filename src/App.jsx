@@ -2,13 +2,18 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { useDispatch, useSelector } from "react-redux";
-import { remove, toggle } from "./redux/action";
+import { add } from "./redux/action";
 import { todoReducer } from "./redux/reducers";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [todo, setTodo] = useState("");
   const dispatch = useDispatch();
   const arr = useSelector((state) => state);
+
+  // const add = (e) => {
+  //   e.preventDefault();
+  // };
 
   return (
     <div className="App">
@@ -20,7 +25,7 @@ function App() {
           action="
         "
           onSubmit={() => {
-            dispatch(add);
+            dispatch(add());
           }}
           className="flex lg:flex-row flex-col items-center lg:w-[70%] w-[100%] justify-around mb-6 gap-4"
         >
@@ -28,9 +33,9 @@ function App() {
             className="lg:w-[70%] w-[90%] border-solid border-1 p-2 border-black rounded-[.5rem] bg-[#ffcd87]"
             type="text"
             placeholder="Input activity here...."
-            value={list}
+            value={todo}
             onChange={(e) => {
-              setList(e.target.value);
+              setTodo(e.target.value);
             }}
           />
           <button className="w-[90%] p-2 lg:w-[20%] border-solid border-2 border-[#ffcd87]  rounded-[.5rem] bg-[white] text-[#ffcd87] hover:bg-[#ffcd87] hover:border-[#ffe6c4] hover:text-white">
