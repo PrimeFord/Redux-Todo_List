@@ -5,14 +5,14 @@ export const add = (todo) => {
   };
 };
 
-// export const toggle = () => {
-//   return {
-//     type: "TOGGLE",
-//   };
-// };
+export const toggle = () => {
+  return {
+    type: "TOGGLE",
+  };
+};
 
-// export const remove = () => {
-//   return {
-//     type: "DELETE",
-//   };
-// };
+export const remove = () => {
+  return {
+    type: "DELETE",
+  };
+};
