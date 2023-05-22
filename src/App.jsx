@@ -7,10 +7,16 @@ import { todoReducer } from "./redux/reducers";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [todo, setTodo] = useState("");
-  const dispatch = useDispatch();
-  const arr = useSelector((state) => state);
-
+  // const [todo, setTodo] = useState([
+  //   { id: 1, title: "read", isCompleted: true },
+  //   { id: 2, title: "book", isCompleted: false },
+  // ]);
+  // const dispatch = useDispatch();
+  // const arr = useSelector((state) => state);
+  const todo = [
+    { id: 1, title: "read", isCompleted: true },
+    { id: 2, title: "book", isCompleted: false },
+  ];
   // const add = (e) => {
   //   e.preventDefault();
   // };
@@ -25,7 +31,7 @@ function App() {
           action="
         "
           onSubmit={() => {
-            dispatch(add());
+            // dispatch(add());
           }}
           className="flex lg:flex-row flex-col items-center lg:w-[70%] w-[100%] justify-around mb-6 gap-4"
         >
@@ -33,32 +39,38 @@ function App() {
             className="lg:w-[70%] w-[90%] border-solid border-1 p-2 border-black rounded-[.5rem] bg-[#ffcd87]"
             type="text"
             placeholder="Input activity here...."
-            value={todo}
-            onChange={(e) => {
-              setTodo(e.target.value);
-            }}
+            // value={todo}
+            // onChange={(e) => {
+            //   setTodo(e.target.value);
+            // }}
           />
           <button className="w-[90%] p-2 lg:w-[20%] border-solid border-2 border-[#ffcd87]  rounded-[.5rem] bg-[white] text-[#ffcd87] hover:bg-[#ffcd87] hover:border-[#ffe6c4] hover:text-white">
             Add to list
           </button>
         </form>
 
-        {arr.map((e, index) => {
+        {todo.map((e, index) => (
           <div
             onClick={() => {
-              dispatch(toggle);
+              // dispatch(toggle);
             }}
-            className="text-black w-[90%] lg:w-[50%] items-center font-[400] text-[1.2rem] flex gap-2 border-solid border-2 border-[#e6e6e6] rounded-[0.3rem] p-2 my-2"
+            className="text-black w-[90%] lg:w-[50%] items-center justify-between  font-[400] text-[1.2rem] flex gap-2 border-solid border-2 border-[#e6e6e6] rounded-[0.3rem] px-4 p-2 my-2"
           >
             <input type="checkbox" checked={e.isCompleted} />
             <span
-              className={e.isCompleted === true ? "completed" : "incompleted"}
+              className={
+                e.isCompleted === true
+                  ? "completed w-[20rem]"
+                  : "incompleted w-[20rem]"
+              }
             >
-              {e.todo}
+              {e.title}
             </span>
-            <span onClick={() => dispatch(remove())}>X</span>
-          </div>;
-        })}
+            <span onClick={() => dispatch(remove())}>
+              <img className="h-5 w-5" src="/image/del.svg" alt="" />
+            </span>
+          </div>
+        ))}
       </div>
     </div>
   );
