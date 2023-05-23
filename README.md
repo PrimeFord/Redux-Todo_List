@@ -28,9 +28,9 @@ Clone or download this repository and run with a local server of open `index.htm
 [Preview Here](https://redux-todo-list-amber.vercel.app/)
 
 ![screenshot](./public/image/snip.png)
-![screenshot](./public/image/snip 2.png)
-![screenshot](./public/image/snip 3.png)
-![screenshot](./public/image/snip 4.png)
+![screenshot](./public/image/snip2.png)
+![screenshot](./public/image/snip3.png)
+![screenshot](./public/image/snip4.png)
 
 ## Contact
 
