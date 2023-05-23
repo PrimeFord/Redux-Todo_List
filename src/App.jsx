@@ -69,7 +69,7 @@ function App() {
             onClick={() => {
               dispatch(toggle(e.id));
             }}
-            className={`text-black w-[90%] lg:w-[50%] items-center justify-between  font-[400] text-[1.2rem] flex gap-2 border-solid border-2 border-[#e6e6e6] rounded-[0.3rem] px-4 p-2 my-2 ${
+            className={`text-black w-[90%] lg:w-[50%] lg:h-10 h-9 items-center justify-between  font-[400] text-[1.2rem] flex gap-2 border-solid border-2 border-[#e6e6e6] rounded-[0.3rem] px-4 p-2 my-2 ${
               e.isCompleted === true
                 ? "border-l-solid border-l-4 border-l-green-500"
                 : "border-l-solid border-l-4 border-l-red-500"
@@ -86,8 +86,11 @@ function App() {
             >
               {e.title}
             </span>
-            <span onClick={() => dispatch(remove(e.id))}>
-              <img className="h-5 w-5" src="/image/close.svg" alt="" />
+            <span
+              className="h-8 w-10 flex items-center justify-center hover:bg-[#e1e1e1] hover:rounded-[50%]"
+              onClick={() => dispatch(remove(e.id))}
+            >
+              <img className="h-5 w-5 " src="/image/close.svg" alt="" />
             </span>
           </div>
         ))}
