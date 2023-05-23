@@ -1,18 +1,31 @@
-export const add = (todo) => {
+export const ADDTODO = "ADDTODO";
+export const TOGGLE = "TOGGLE";
+export const DELETE = "DELETE";
+export const DELETEALL = "DELETEALL";
+
+export const add = (payload) => {
   return {
-    type: "ADDTODO",
-    payload: todo,
+    type: ADDTODO,
+    payload,
   };
 };
 
-export const toggle = () => {
+export const toggle = (payload) => {
   return {
-    type: "TOGGLE",
+    type: TOGGLE,
+    payload,
   };
 };
 
-export const remove = () => {
+export const remove = (payload) => {
   return {
-    type: "DELETE",
+    type: DELETE,
+    payload,
+  };
+};
+
+export const deleteAll = () => {
+  return {
+    type: DELETEALL,
   };
 };

@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 .App {
-  @apply h-[100Vh] w-[100%] bg-[#e6e6e6] flex justify-center items-center;
+  @apply min-h-[100vh] py-[2rem] lg:py-[5rem] w-[100%] bg-[#e6e6e6] flex justify-center items-center;
 }
 .App {
   font-family: sans-serif;
@@ -9,9 +9,13 @@
 .completed {
   color: gray;
   text-decoration: line-through;
+  /* border-left: 3px solid rgba(96, 255, 96, 0.877); */
 }
 span {
   cursor: pointer;
   user-select: none;
+}
+.delete_all {
+  @apply w-[90%] p-2 mt-6 lg:w-[20%] border-solid border-2 border-[#f83a3ace]  rounded-[.5rem] bg-white text-[#f83a3ace] hover:bg-[#f83a3ace] hover:border-[#f83a3ace] hover:text-white;
 }
 @tailwind utilities;
