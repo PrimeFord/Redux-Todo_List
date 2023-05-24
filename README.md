@@ -13,6 +13,8 @@ Clone or download this repository and run with a local server of open `index.htm
 ## Features
 
 - Todo Page
+- Add Button
+- Delete All button
 
 ## Tech/framework used
 
