@@ -41,5 +41,4 @@ If you want to contact me you can reach me at
 
 ## Addtional Info
 
-- This is one of the series of project for the @Codevillage Programming Lessons.
 - This is not meant for production. It's for learning purpose only
